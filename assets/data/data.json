@@ -1,0 +1,59 @@
+{
+    "tasks" : {
+        "low" : {
+            "min": 0,
+            "max": 10,
+            "negative": false,
+            "numberOfTasks": 10,
+            "operations": [
+                {
+                    "task" : "a + b"
+                },
+                {
+                    "task" : "a - b"
+                }
+            ]
+        },
+        "middle" : {
+            "min": 0,
+            "max": 50,
+            "negative": false,
+            "numberOfTasks": 10,
+            "operations": [
+                {
+                    "task" : "a + b"
+                },
+                {
+                    "task" : "a - b"
+                }
+            ]
+        },
+        "high" : {
+            "min": 0,
+            "max": 50,
+            "negative": true,
+            "numberOfTasks": 10,
+            "operations": [
+                {
+                    "task" : "a + b"
+                },
+                {
+                    "task" : "a - b"
+                },
+                {
+                    "task" : "a * b"
+                },
+                {
+                    "task" : "a / b"
+                }
+            ]
+        }
+    },
+
+    "imena" : [
+        "papuča",
+        "ravnalo",
+        "matematičar",
+        "učenik"
+    ]
+}

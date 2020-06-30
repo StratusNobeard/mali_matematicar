@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="body">
+    <div class="container game-container">
+        <div class="form-group">
+        <div class="alert alert-danger blinking greska1" role="alert" id="greska1" style="display: none;"></div>
+        <label for="nickname" class="lead text">Upišite nadimak:</label>
+        <input type="text" class="form-control control-select" id="nickname" placeholder="nadimak">
+        <!-- <button class="btn btn-outline-danger btn-random" onclick="getNames();"><img src="assets/images/kocka.png" class="random"></button> -->
+        </div>
+        <div class="form-group">
+        <label for="gameLevel" class="lead text">Odaberite težinu igre:</label>
+        <select class="form-control control-select" id="gameLevel">
+            <option value="0" class="textL">Lagano I</option>
+            <option value="1" class="textS">Srednje II</option>
+            <option value="2" class="textT">Teško III</option>
+        </select>
+        </div>
+        <button class="btn btn-info game-start-btn btn-lg" id="btnResults" onclick="return false;" style="margin-left: 2%;">Ljestvice</button>
+        <button class="btn btn-success game-start-btn btn-lg" id="btnStartGame" onclick="return false;" style="margin-left: 4%;">Pokreni igru</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="tezina" class="težina"></div><div class="outerbar" id="Obar"><div id="bar" class="bar"></div></div><div class="much" id="much"></div>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="gameContainer" class="zadatak"></div>
+            </div>
+            <div class="modal-footer"></div>
+            <button type="button" class="gamebtn btn btn-success btn-lg" onClick="location.href='game-setup.html';" id="send" style="margin-left: 1%;">Pošaljite odgovore<img src="" class="logoTežine-sm" id="sendImg"></button>
+            <div class="alert alert-danger greska2 blinking" role="alert" id="greska2" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="gameResults" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Ljestvice - TOP 10 najboljih</h1>
+                <span class="resultsClose">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="gameResultsContainer"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="JS/scripts.js"></script>
+</body>
+</html>
